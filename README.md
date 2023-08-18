@@ -1,4 +1,4 @@
-# quickstay-desktop
+# fluxstay-desktop
 
 QuickStay Desktop API documentation.
 
