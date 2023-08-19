@@ -53,11 +53,15 @@
         </div>
 
         <div>
-          <button type="submit" class="flex w-full justify-center rounded-md
+          <button :disabled="loading" type="submit" class="flex w-full justify-center rounded-md
                bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6
                text-white shadow-sm hover:bg-indigo-500 focus-visible:outline 
                  focus-visible:outline-2 focus-visible:outline-offset-2
-               focus-visible:outline-indigo-600">
+               focus-visible:outline-indigo-600" 
+                :class="{
+                'cursor-not-allowed': loading,
+                'hover:bg-gray-700': loading,
+              }">
              <svg v-if="loading" class="animate-spin -ml-1 mr-3  h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
               <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
               <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
@@ -103,19 +107,13 @@ export default {
           }
         });
 
-        // Assuming successful login returns a token or user data
-        const token = response.data.token; // Change this based on your API response
-
-        // Save the token or user data to local storage or session
-         localStorage.setItem('token', token);
+        const userData = response.data.data;
+        // Save the user data to local storage
+        localStorage.setItem('userData', JSON.stringify(userData));
 
         // Navigate to a different view or perform necessary actions on successful login
          this.$router.push('/dashboard');
-
-        // Close the Tauri window after successful login (you can modify this behavior)
-        // tauri.invoke({
-        //   cmd: 'close'
-        // });
+       
       } catch (error) {
         this.errorMsg = 'Invalid credentials. Please try again.';
       } finally {
