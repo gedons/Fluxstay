@@ -7,7 +7,7 @@
     "distDir": "../dist"
   },
   "package": {
-    "productName": "fluxstay",
+    "productName": "Quickstay",
     "version": "0.1.0"
   },
   "tauri": {
@@ -59,10 +59,11 @@
     "windows": [
       {
         "fullscreen": false,
-        "height": 600,
+        "height": 700,
         "resizable": true,
         "title": "fluxstay",
-        "width": 800
+        "width": 1400,
+        "center": true
       }
     ]
   }
