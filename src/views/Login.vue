@@ -100,7 +100,7 @@ export default {
       this.loading = true;
 
       try {
-        const response = await axios.post('http://46.101.99.101/users/sign_in', {
+        const response = await axios.post('https://46.101.99.101/users/sign_in', {
           user: {
             email: this.user.email,
             password: this.user.password
