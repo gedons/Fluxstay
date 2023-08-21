@@ -61,8 +61,8 @@
         "fullscreen": false,
         "height": 700,
         "resizable": true,
-        "title": "fluxstay",
-        "width": 1400,
+        "title": "QuickStay",
+        "width": 1200,
         "center": true
       }
     ]
