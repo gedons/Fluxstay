@@ -42,7 +42,7 @@
         <!-- total task count -->
         <div class="order-1 lg:order-1 bg-white shadow-md p-3 text-center flex flex-col animate-fade-in-down"
           style="animation-delay: 0.2s">
-          <h2 class="text-2xl mb-3 text-center font-semibold">Available Rooms</h2>
+          <h2 class="text-2xl mb-3 text-center font-semibold">Rooms</h2>
           <div class="text-8xl pb-4 font-semibold flex-1 flex items-center justify-center">
             4
           </div>
@@ -52,7 +52,7 @@
         <!-- completed task count -->
         <div class="order-2 lg:order-2 bg-white shadow-md p-3 text-center flex flex-col animate-fade-in-down"
           style="animation-delay: 0.2s">
-          <h2 class="text-2xl mb-3 text-center font-semibold">Total Reservations</h2>
+          <h2 class="text-2xl mb-3 text-center font-semibold">Reservations</h2>
           <div class="text-8xl pb-4 font-semibold flex-1 flex items-center justify-center">
             15
           </div>
